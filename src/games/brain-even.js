@@ -1,41 +1,19 @@
-import readlineSync from 'readline-sync';
+import playGame from '../index.js';
 
 import { getRandomNumber, isEven } from '../utils.js';
-import getAcquainted from '../greetings.js';
+import { GameRules } from '../consts.js';
 
-const gameRules = 'Answer "yes" if the number is even, otherwise answer "no".';
-const name = getAcquainted();
-const needToSolve = 3;
+const rules = GameRules.BRAIN_EVEN;
 
 function playBrainEven() {
-  console.log(gameRules);
+  const makeRiddle = () => {
+    const question = getRandomNumber();
+    const solution = isEven(question) ? 'yes' : 'no';
 
-  // initial values
-  let solvedCount = 0;
+    return [question, solution];
+  };
 
-  // game loop
-  while (solvedCount < needToSolve) {
-    const number = getRandomNumber();
-    const correct = isEven(number) ? 'yes' : 'no';
-
-    console.log(`Question: ${number}`);
-    const answer = readlineSync.question('Your answer: ');
-
-    if (answer === correct) {
-      console.log('Correct!');
-      solvedCount += 1;
-    } else {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correct}'.`);
-      break;
-    }
-  }
-
-  // game result
-  if (solvedCount === needToSolve) {
-    console.log(`Congratulations, ${name}!`);
-  } else {
-    console.log(`Let's try again, ${name}!`);
-  }
+  playGame(rules, makeRiddle);
 }
 
 export default playBrainEven;
