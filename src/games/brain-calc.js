@@ -17,7 +17,7 @@ function playBrainCalc(operandMin = 1, operandMax = 10) {
     const operand1 = getRandomNumber(operandMin, operandMax);
     const operand2 = getRandomNumber(operandMin, operandMax);
 
-    const operator = operators[getRandomNumber(0, operators.length)];
+    const operator = operators[getRandomNumber(0, operators.length - 1)];
 
     const question = `${operand1} ${operator} ${operand2}`;
     const solution = `${calculation[operator](operand1, operand2)}`;
