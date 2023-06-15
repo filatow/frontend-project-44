@@ -5,9 +5,9 @@ import { GameRules } from '../consts.js';
 
 const rules = GameRules.BRAIN_PRIME;
 
-function playBrainPrime(maxNumber = 50) {
+function playBrainPrime(minNumber = 1, maxNumber = 50) {
   const makeRiddle = () => {
-    const number = getRandomNumber(1, maxNumber);
+    const number = getRandomNumber(minNumber, maxNumber);
     const question = String(number);
     const solution = isPrime(number) ? 'yes' : 'no';
 
