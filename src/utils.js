@@ -15,3 +15,13 @@ export function isEven(number) {
 export function isDivisorOf(valueToCheck, number) {
   return number % valueToCheck === 0;
 }
+
+export function isPrime(num) {
+  if (num < 2) return false;
+
+  for (let div = 2; div <= Math.sqrt(num); div += 1) {
+    if (num % div === 0) return false;
+  }
+
+  return true;
+}
