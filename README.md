@@ -6,3 +6,4 @@
 1. [Brain-even game asciinema](https://asciinema.org/a/gOr6wHVxy59fgPjYvpproLuxa)
 2. [Brain-even game asciinema](https://asciinema.org/a/aPYo5TDyoAedlUyImaPqXfPXI)
 3. [Brain-gcd game asciinema](https://asciinema.org/a/hwvyOHBW8UU4A44hvaEasiIFy)
+4. [Brain-progression asciinema](https://asciinema.org/a/WETYZbCSUng4IRvbiOGnXNLrr)
